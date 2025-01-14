@@ -8,7 +8,7 @@ from config import bot
 from src.embeds.noPermEmbed import no_perm_embed
 import src.commands.kill  # noqa: F401
 
-cogs = []
+cogs = ["cogs.ai"]
 
 for cog in cogs:
     try:
