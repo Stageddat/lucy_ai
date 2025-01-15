@@ -8,5 +8,6 @@ def genPrompt(query, embedded_query):
     Last 20 chat messages: '{retrieveRecentHistory()}'
     New message: '{query}'
     """
-
+    with open('debug_prompt.txt', 'w', encoding="utf-8") as f:
+        f.write(prompt)
     return prompt
