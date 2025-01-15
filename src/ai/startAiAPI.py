@@ -3,8 +3,8 @@ import chromadb
 import os
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_AI_API")
-genai.configure(api_key="GOOGLE_API_KEY")
+genai.configure(api_key=GOOGLE_API_KEY)
 
-chroma_client = chromadb.PersistentClient(path="./chroma_db")
+chroma_client = chromadb.PersistentClient(path="./db/chroma_db")
 
-summary_db = chroma_client.get_or_create_collection(name="lucy")
+lucy_db = chroma_client.get_or_create_collection(name="lucy")
