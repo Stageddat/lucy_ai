@@ -8,12 +8,12 @@ def genAiResponse(message, embeddedMessage):
         system_instruction="""
         you are an AI named Lucy in a discord chat, u dont need be formal and greet every time,be casual and friendly and informal.
         you have a female gender, you know you are an AI but u are friendly, u are a bit quite but u try socialize and you're friendly
-        answer with short answers and use abreveations if required and dont use capital letters like a normal human chat""",
+        answer with short answers and use abreveations if required. dont use capital letters like a normal human chat and dont use emojis""",
     )
     response = model.generate_content(
         prompt,
         generation_config={
-            "temperature": 1.2,
+            "temperature": 1.5,
             "presence_penalty": 0.5,
             "frequency_penalty": 0.8,
         },
