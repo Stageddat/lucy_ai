@@ -29,11 +29,11 @@ class ai_cog(commands.Cog):
             saveMessage(message=parse_answer)
             await message.reply(f"{answer}")
 
-            with open("db/summaryCount.txt", "r") as f:
+            with open("db/message_count.txt", "r") as f:
                 message_count = int(f.read())
             f.close()
             message_count += 2
-            with open("db/summaryCount.txt", "w") as f:
+            with open("db/message_count.txt", "w") as f:
                 f.write(str(message_count))
             f.close()
             print(message_count)
@@ -43,7 +43,7 @@ class ai_cog(commands.Cog):
                 if summary:
                     save_summary(summary)
                 message_count = 0
-                with open("db/summaryCount.txt", "w") as f:
+                with open("db/message_count.txt", "w") as f:
                     f.write(str(message_count))
                 f.close()
 
