@@ -1,11 +1,10 @@
 # Lucy AI  
 
-Lucy is an advanced AI-powered chatbot designed for Discord servers, featuring long-term memory capabilities and a seamless user experience.  
+Lucy is an advanced AI-powered chatbot designed for my Discord server, with long-term memory capabilities and with the goal of no more dead chats and having a good time chatting with her.
 
 ## Description  
 
-Lucy use Google Gemini API combined with ChromaDB to provide intelligent and context-aware interactions. Built for my own Discord server.
-I don't recommend editing or adapting the code but that's up to you :3
+Lucy use Google Gemini API combined with ChromaDB to provide intelligent and context-aware interactions. Built for my own Discord server so I don't recommend editing or adapting the code but that's up to you :3
 
 ## Features  
 
@@ -25,6 +24,7 @@ I don't recommend editing or adapting the code but that's up to you :3
 - [ ] Allow Lucy to search for information on the internet
 - [ ] Allow Lucy to understand images/gifs
 - [ ] Allow Lucy to see Discord activity presence
+- [ ] Allow Lucy to see users profiles
 - [ ] Allow Lucy to DM chat
 - [ ] Allow Lucy to generate image?? (unconfirmed idea)
 - [ ] Allow Lucy to understand voice audio??  (unconfirmed idea)
