@@ -1,5 +1,6 @@
 import google.generativeai as genai
 from src.ai.genPrompt import genPrompt
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 
 def genAiResponse(message, embeddedMessage):
@@ -12,6 +13,12 @@ def genAiResponse(message, embeddedMessage):
         you can be playful or slightly sarcastic if the context allows, but keep a friendly tone. 
         don't use emojis or capital letters, and keep your tone informal, natural, and slightly reserved. engage only if the conversation seems to need it.
         """,
+        safety_settings={
+            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.HARM_BLOCK_THRESHOLD_UNSPECIFIED,
+            HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.HARM_BLOCK_THRESHOLD_UNSPECIFIED,
+            HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.HARM_BLOCK_THRESHOLD_UNSPECIFIED,
+            HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.HARM_BLOCK_THRESHOLD_UNSPECIFIED,
+        },
     )
     response = model.generate_content(
         prompt,
