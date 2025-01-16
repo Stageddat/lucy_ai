@@ -4,7 +4,7 @@ Lucy is an advanced AI-powered chatbot designed for my Discord server, with long
 
 ## Description  
 
-Lucy use Google Gemini API combined with ChromaDB to provide intelligent and context-aware interactions. Built for my own Discord server so I don't recommend editing or adapting the code but that's up to you :3
+Lucy use [Google Gemini API](https://ai.google.dev/) combined with [ChromaDB](https://www.trychroma.com/) to provide intelligent and context-aware interactions. Built for my own Discord server so I don't recommend editing or adapting the code but that's up to you :3
 
 ## Features  
 
