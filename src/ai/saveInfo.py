@@ -4,12 +4,24 @@ import random
 import string
 from src.ai.embedGenerator import generate_embedding
 
+
 def save_summary(summary):
-    actual_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    actual_time = datetime.now()
+    formatted_date = actual_time.strftime("%Y-%m-%d")
+    formatted_time = actual_time.strftime("%H:%M:%S")
+    hour_24 = actual_time.hour
     embedded_summary = generate_embedding(summary)
+
     lucy_db.add(
         documents=[summary],
         embeddings=[embedded_summary],
-        ids=[str(''.join(random.choices(string.ascii_letters, k=20)))],
-        metadatas=[{"author": "summary", "date": actual_time}],
+        ids=["".join(random.choices(string.ascii_letters, k=20))],
+        metadatas=[
+            {
+                "author": "summary",
+                "date": formatted_date,
+                "time": formatted_time,
+                "hour_24": hour_24,
+            }
+        ],
     )
