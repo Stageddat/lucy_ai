@@ -15,7 +15,7 @@ class ai_cog(commands.Cog):
     async def on_message(self, message: discord.Message):
         if message.author.bot:
             return
-        if message.channel.id != 931840054526095370:
+        if message.channel.id != 1329543101034795079:
             return
         else:
             actual_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
