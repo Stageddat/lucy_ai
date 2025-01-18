@@ -5,6 +5,8 @@ import os
 GOOGLE_API_KEY = os.getenv("GOOGLE_AI_API")
 genai.configure(api_key=GOOGLE_API_KEY)
 
-chroma_client = chromadb.PersistentClient(path="./db/chroma_db")
+chromaClient = chromadb.PersistentClient(path="./db/chroma_db")
 
-lucy_db = chroma_client.get_or_create_collection(name="lucy")
+lucyNoteDb = chromaClient.get_or_create_collection(name="lucyNote")
+lucySummaryDb = chromaClient.get_or_create_collection(name="lucySummary")
+lucyHighlightDb = chromaClient.get_or_create_collection(name="lucyHighlight")
