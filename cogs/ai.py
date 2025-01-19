@@ -5,7 +5,7 @@ from src.ai.embedGenerator import generate_embedding
 from src.ai.aiResponse import genAiResponse
 from src.ai.saveMessage import saveMessage
 from src.ai.genSummary import genSummary
-from src.ai.saveInfo import save_summary
+from src.ai.saveSummary import saveSummary
 
 class ai_cog(commands.Cog):
     def __init__(self, bot):
@@ -41,7 +41,7 @@ class ai_cog(commands.Cog):
             if message_count >= 20:
                 summary = genSummary()
                 if summary:
-                    save_summary(summary)
+                    saveSummary(summary)
                 message_count = 0
                 with open("db/message_count.txt", "w") as f:
                     f.write(str(message_count))

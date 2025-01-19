@@ -5,7 +5,7 @@ import string
 from src.ai.embedGenerator import generate_embedding
 
 
-def save_summary(summary):
+def saveSummary(summary):
     actual_time = datetime.now()
     formatted_date = actual_time.strftime("%Y-%m-%d")
     formatted_time = actual_time.strftime("%H:%M:%S")
