@@ -1,5 +1,5 @@
-from src.ai.getRelevantInfo import getRevelantInfo
-from src.ai.getRecentHistory import retrieveRecentHistory
+from src.ai.getData.getRelevantInfo import getRevelantInfo
+from src.ai.getData.getRecentHistory import retrieveRecentHistory
 
 def genPrompt(query, embedded_query):
     relevant_info = getRevelantInfo(embedded_query)
