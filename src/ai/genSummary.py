@@ -1,4 +1,3 @@
-from datetime import datetime
 import google.generativeai as genai
 
 def genSummary():
@@ -14,8 +13,6 @@ def genSummary():
     prompt = f"Summarize the following conversation in a clear and concise paragraph.:\n\n{conversation_snippet}"
     model = genai.GenerativeModel("gemini-1.5-flash")
     response = model.generate_content(prompt)
-    parsed_response = (
-        f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}]: {response.text.strip()}"
-    )
+    parsed_response = response.text.strip()
     print(f"Summary generated:\n{parsed_response}")
     return parsed_response
