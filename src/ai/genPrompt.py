@@ -1,6 +1,6 @@
-from ai.getData.getRelevantNotes import getRevelantNotes
-from ai.getData.getRelevantSummary import getRevelantSummary
-from ai.getData.getRelevantHighlight import getRelevantHighlight
+from src.ai.getData.getRelevantNotes import getRevelantNotes
+from src.ai.getData.getRelevantSummary import getRevelantSummary
+from src.ai.getData.getRelevantHighlight import getRelevantHighlight
 from src.ai.getData.getRecentHistory import retrieveRecentHistory
 
 def genPrompt(query, embedded_query):
