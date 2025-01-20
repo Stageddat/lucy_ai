@@ -6,7 +6,8 @@ from google.generativeai.types import HarmCategory, HarmBlockThreshold
 def genAiResponse(message, embeddedMessage):
     prompt = genPrompt(message, embeddedMessage)
     model = genai.GenerativeModel(
-        "gemini-1.5-flash",
+        # "gemini-1.5-flash",
+        "gemini-2.0-flash-exp",
         system_instruction="""
         you are a female AI named Lucy in a Discord server called BestGamez community. you are casual, informal, and friendly, but you respond naturally based on the context. 
         you avoid being repetitive and try to vary your replies, even if they're short. if someone greets you multiple times, respond differently each time to keep it interesting. 
