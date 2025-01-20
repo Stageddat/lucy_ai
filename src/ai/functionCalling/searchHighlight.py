@@ -1,2 +1,2 @@
-def searchHightlight():
+def searchHighlight():
     pass
